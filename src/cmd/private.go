@@ -68,12 +68,15 @@ var privateCmd = &cobra.Command{
 					cobra.CheckErr(fmt.Errorf("error al obtener las direcciones de esta interfaz: %s", err.Error()))
 				}
 
-				intfs = append(intfs, SimpleInterface{
-					Name: intf.Name,
-					IPv4: net.ParseIP(strings.Split(addrs[0].String(), "/")[0]),
-					IPv6: net.ParseIP(strings.Split(addrs[1].String(), "/")[0]),
-					Mac:  intf.HardwareAddr,
-				})
+				//Si tiene addrs, sino esta "apagada" o sin conexion
+				if len(addrs) >= 2 {
+					intfs = append(intfs, SimpleInterface{
+						Name: intf.Name,
+						IPv4: net.ParseIP(strings.Split(addrs[0].String(), "/")[0]),
+						IPv6: net.ParseIP(strings.Split(addrs[1].String(), "/")[0]),
+						Mac:  intf.HardwareAddr,
+					})
+				}
 			}
 		}
 

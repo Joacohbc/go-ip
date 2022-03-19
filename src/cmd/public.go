@@ -37,8 +37,7 @@ var publicCmd = &cobra.Command{
 	Short: "Imprime la IP publica",
 	Run: func(cmd *cobra.Command, args []string) {
 
-		//Nunca imprimo los errores debido a que tiene que
-		//pobrar todos URL
+		//Nunca imprimo los errores debido a que tiene que pobrar todos URL
 		for _, url := range IPUrls {
 			req, err := http.Get(url)
 			if err != nil {
