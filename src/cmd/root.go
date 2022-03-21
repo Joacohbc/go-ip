@@ -24,12 +24,8 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "go-ip",
-	Short: "Muestra las IPs de las interfaces y la IP publica",
-
-	Args: cobra.MinimumNArgs(1),
-	Run: func(cmd *cobra.Command, args []string) {
-
-	},
+	Short: "Muestra las IPs de las interfaces y la IP publica del dispositivo",
+	Args:  cobra.ExactArgs(0),
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -39,8 +35,4 @@ func Execute() {
 	if err != nil {
 		os.Exit(1)
 	}
-}
-
-func init() {
-
 }

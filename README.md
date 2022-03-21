@@ -40,23 +40,22 @@ go-ip private -i eth0 -a
 ## Instalacion
 
 En caso de quere instalarlo solo hay que mover compilar el binario (o usar el compilado en directorio bin) y moverlo
-a la carpeta de binarios del S.0, en Linux generalmente /usr/bin.
+a la carpeta de binarios del S.0, en Linux generalmente /usr/bin. Este proceso ya lo hace el install.sh.
 
 - Clonar el repositorio
 
 ```bash
-git clone https://github.com/Joacohbc/go-ip
+git clone https://github.com/Joacohbc/go-ip\
+```
+
+- Entrar a la carpeta
+
+```bash
 cd go-ip
 ```
 
-- Compilar el binario
+- Y ejecutar el instalador
 
 ```bash
-go build -o go-ip ./src/*.go
-```
-
-- Mover binario a la carpeta de binarios, en este caso /usr/bin
-
-```bash
-sudo mv ./go-ip /usr/bin
+sh ./install.sh
 ```

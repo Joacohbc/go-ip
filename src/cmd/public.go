@@ -29,12 +29,15 @@ var IPUrls []string = []string{
 	"http://ifconfig.me/ip",
 	"http://ifconfig.co",
 	"http://ip-api.com/line/?fields=query",
+	"http://ipwhois.app/csv/?objects=ip",
+	"https://ipapi.co/ip",
 }
 
 // publicCmd represents the public command
 var publicCmd = &cobra.Command{
 	Use:   "public",
 	Short: "Imprime la IP publica",
+	Args:  cobra.ExactArgs(0),
 	Run: func(cmd *cobra.Command, args []string) {
 
 		//Nunca imprimo los errores debido a que tiene que pobrar todos URL
