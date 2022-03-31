@@ -1,6 +1,6 @@
 # Go-ip
 
-Go-ip es un comando que cumple la funcion consultar el IP publica del dispositivo y tambien informacion de las interfaces de red del dispositivo, entre esa informacion el IP Privada de alguna placa
+Go-ip es un comando que cumple la funcion consultar el IP publica del dispositivo y tambien informacion de las interfaces de red del dispositivo, entre esa información el IP Privada de alguna placa
 
 Para consultar el IP Publico
 
@@ -19,33 +19,33 @@ go-ip public | xclip -sel clip
 xclip -o sel clip
 ```
 
-Para consultar le IP de alguna placa, en el ejemplo la placa eth0
+Para consultar la IP de alguna placa, en el ejemplo la placa eth0
 
 ```bash
 go-ip private -i eth0
 ```
 
-Si quiero consultar toda la informacion de toda las placas simplemente pongo
+Si quiero consultar toda la información de toda las placas simplemente pongo
 
 ```bash
 go-ip private
 ```
 
-Si quiero consultar toda la informacion de una sola placa utilizo
+Si quiero consultar toda la información de una sola placa utilizó
 
 ```bash
 go-ip private -i eth0 -a
 ```
 
-## Instalacion
+## Instalación
 
-En caso de quere instalarlo solo hay que mover compilar el binario (o usar el compilado en directorio bin) y moverlo
+En caso de querer instalarlo solo hay que mover compilar el binario (o usar el compilado en directorio bin) y moverlo
 a la carpeta de binarios del S.0, en Linux generalmente /usr/bin. Este proceso ya lo hace el install.sh.
 
 - Clonar el repositorio
 
 ```bash
-git clone https://github.com/Joacohbc/go-ip\
+git clone https://github.com/Joacohbc/go-ip
 ```
 
 - Entrar a la carpeta
